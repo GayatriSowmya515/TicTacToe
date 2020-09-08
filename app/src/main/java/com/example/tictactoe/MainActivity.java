@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
              //   GameLogic.setPlayer('0');
-                GameLogic.Move bestMove = GameLogic.findBestMove(board,c);
+                GameLogicX.Move bestMove = GameLogicX.findBestMove(board);
                 Toast.makeText(MainActivity.this, "X!!!", Toast.LENGTH_SHORT).show();
                 board[bestMove.row][bestMove.col] = 'X';
                 btn[bestMove.row][bestMove.col].setText("X");
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                                 Toast.makeText(MainActivity.this, "Player 0 wins", Toast.LENGTH_SHORT).show();
                             }
                             else{
-                                GameLogic.Move bestMove = GameLogic.findBestMove(board,c);
+                                GameLogicX.Move bestMove = GameLogicX.findBestMove(board);
                                 board[bestMove.row][bestMove.col] = 'X';
                                 btn[bestMove.row][bestMove.col].setText("X");
                                 if(Evaluate.evaluate(board, bestMove.row, bestMove.col)) {
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                                 Toast.makeText(MainActivity.this, "Draw!!!", Toast.LENGTH_SHORT).show();
                             }
                             else{
-                                GameLogic.Move bestMove = GameLogic.findBestMove(board,c);
+                                GameLogic.Move bestMove = GameLogic.findBestMove(board);
                                 board[bestMove.row][bestMove.col] = '0';
                                 if(Evaluate.evaluate(board, bestMove.row, bestMove.col)) {
                                     f=1;

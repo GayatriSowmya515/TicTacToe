@@ -1,25 +1,25 @@
 package com.example.tictactoe;
 
-public class GameLogic
+public class GameLogicX
 {
     static class Move
     {
         int row, col;
     };
 
-    static char player ='0' ,opponent='X' ;
+    static char player ='X' ,opponent = '0' ;
 
 
-  /*  static void setPlayer(char c){
-        player = c;
-        if(c=='0'){
-            opponent = 'X';
-        }
-        else{
-            opponent = '0';
-        }
-    }
-*/
+    /*  static void setPlayer(char c){
+          player = c;
+          if(c=='0'){
+              opponent = 'X';
+          }
+          else{
+              opponent = '0';
+          }
+      }
+  */
     // This function returns true if there are moves
 // remaining on the board. It returns false if
 // there are no moves left to play.
@@ -210,8 +210,8 @@ public class GameLogic
             }
         }
 
-       // System.out.printf("The value of the best Move " +
-       //         "is : %d\n\n", bestVal);
+        // System.out.printf("The value of the best Move " +
+        //         "is : %d\n\n", bestVal);
 
         return bestMove;
     }
